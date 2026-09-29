@@ -1,4 +1,5 @@
-GitHub README — Retail Sales Analytics
+#GitHub README — Retail Sales Analytics
+
 Retail Sales & Profitability Analytics
 End-to-End Data Analytics Project
 An end-to-end retail analytics project built using MySQL, SQL and Power BI to analyze sales, profitability, products, customers, regions and payment methods.
