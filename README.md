@@ -1,11 +1,14 @@
-#GitHub README — Retail Sales Analytics
+GitHub README — Retail Sales Analytics
 
 Retail Sales & Profitability Analytics
+
 End-to-End Data Analytics Project
+
 An end-to-end retail analytics project built using MySQL, SQL and Power BI to analyze sales, profitability, products, customers, regions and payment methods.
 The project transforms retail transaction data into an interactive Power BI dashboard designed to support business performance analysis and decision-making.
 
 Project Overview
+
 The objective of this project is to understand retail business performance across different dimensions such as:
 •	Sales
 •	Profit
@@ -20,6 +23,7 @@ The objective of this project is to understand retail business performance acros
 The project uses SQL for data preparation and analysis and Power BI for data modeling, DAX calculations and interactive visualization.
 
 Business Objectives
+
 This project was developed to answer important business questions such as:
 •	What are the total sales and total profit?
 •	How is sales performance changing month by month?
@@ -34,6 +38,7 @@ This project was developed to answer important business questions such as:
 •	Which products and categories require further investigation?
 
 Technology Stack
+
 •	MySQL
 •	MySQL Workbench
 •	SQL
@@ -43,6 +48,7 @@ Technology Stack
 •	GitHub
 
 Data Analytics Workflow
+
 Raw Retail Data
        ↓
 MySQL Staging
@@ -62,7 +68,9 @@ Interactive Power BI Dashboard
 Business Insights
 
 Dashboard Pages
+
 1. Executive Overview
+   
 The Executive Overview provides a high-level view of overall retail performance.
 It includes:
 •	Total Sales
@@ -78,6 +86,7 @@ It includes:
 The dashboard allows users to analyze overall business performance and identify changes in sales and profitability over time.
 
 2. Product & Category Performance
+   
 This page focuses on product and category-level performance.
 It includes:
 •	Top 5 Products by Sales
@@ -91,6 +100,7 @@ It includes:
 The analysis helps identify products and categories that contribute significantly to sales and profitability.
 
 3. Customer & Geographic Performance
+   
 This page analyzes customer and geographic performance.
 It includes:
 •	Total Customers
@@ -106,6 +116,7 @@ It includes:
 The analysis helps understand where sales are generated and which customers contribute significantly to business performance.
 
 4. Business Insights
+   
 The Business Insights page focuses on deeper business-level analysis.
 It includes:
 •	Monthly Sales
@@ -117,7 +128,9 @@ It includes:
 The page is designed to identify changes in performance and provide additional insights beyond basic KPI reporting.
 
 Selected Dashboard Insights
+
 Sales Performance
+
 The dashboard reports total sales of approximately $533.67M and total profit of approximately $79.71M, resulting in an overall profit margin of 14.94%.
 Regional Performance
 Sales are distributed across four regions:
@@ -155,6 +168,7 @@ The dashboard compares customer orders across:
 This provides visibility into customer ordering behavior by payment method.
 
 SQL Skills Demonstrated
+
 The SQL portion of the project focuses on preparing and analyzing the retail data.
 Skills demonstrated include:
 •	Database creation
@@ -176,6 +190,7 @@ Skills demonstrated include:
 •	Business Analysis Queries
 
 Power BI Skills Demonstrated
+
 The Power BI solution demonstrates:
 •	Data loading
 •	Data transformation
@@ -199,6 +214,7 @@ The Power BI solution demonstrates:
 •	Interactive dashboard design
 
 Data Model
+
 The analytical model is designed around a central sales fact table and supporting dimension tables.
 Fact Table
 •	fact_sales
