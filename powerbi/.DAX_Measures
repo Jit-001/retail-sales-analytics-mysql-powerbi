@@ -1,1 +1,107 @@
+# DAX Measures
+## Total Sales
 
+Total Sales = 
+    SUM('retail_analytics fact_sales'[sales])
+
+## Total Profit
+
+Total Profit = 
+    sum('retail_analytics fact_sales'[profit])
+
+## Profit Margin %
+
+Profit Margin % = 
+    DIVIDE(
+        [Total Profit],
+        [Total Sales],
+        0
+        )
+
+## Total Orders
+
+Total Orders = 
+    DISTINCTCOUNT('retail_analytics fact_sales'[order_id])
+
+## Total Customers
+
+Total Customers = 
+    DISTINCTCOUNT('retail_analytics fact_sales'[customer_key])
+
+## Total Units
+
+Total Units = 
+    sum('retail_analytics fact_sales'[quantity])
+
+## Average Order Value
+
+Average Order Value = 
+    DIVIDE(
+        [Total Sales],
+        [Total Orders],
+        0
+    )
+
+## Customer Ranking by Sales
+
+Customer Sales Rank = 
+    RANKX(
+        ALL('retail_analytics dim_customer'[customer_name]),
+        [Total Sales],
+        ,
+        DESC,
+        Dense
+    )
+
+## Product Ranking by Sales
+
+Product Sales Rank = 
+    RANKX(
+        ALL('retail_analytics dim_product'[product_name]),
+        [Total Sales],
+        ,
+        DESC,
+        Dense
+    )
+
+## MoM %
+
+MoM% = 
+VAR SalesCM = CALCULATE(
+		[Total Sales],
+		DATEADD(
+			'retail_analytics dim_date'[full_date],
+			0,
+			MONTH
+		)
+	)
+	VAR SalesLM = CALCULATE(
+		[Total Sales],
+		DATEADD(
+			'retail_analytics dim_date'[full_date],
+			-1,
+			MONTH
+		)
+	)
+
+## Top 1 Product - Dynamically Changing Product Name
+
+Top 1 Product =
+CONCATENATEX
+	(
+		TOPN(
+			1,
+			(
+			SUMMARIZE(
+				'retail_analytics dim_product',
+				'retail_analytics dim_product'[product_name],
+				"TotalSales", [Total Sales]
+			)),
+			[TotalSales],
+			DESC
+		),
+		'retail_analytics dim_product'[product_name],
+		,
+		'retail_analytics dim_product'[product_name],
+		ASC
+	)
